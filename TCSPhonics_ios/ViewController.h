@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ViewController : UIViewController
 
-
+@property (nonatomic, strong)UICollectionView * collectionView;
+@property (nonatomic, strong)UIImageView * imageView;
+@property (nonatomic, strong)NSArray * array;
 @end
 

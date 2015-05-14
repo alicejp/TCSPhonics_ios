@@ -10,10 +10,12 @@
 		B49F07EC1B036F7300FB9ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07EB1B036F7300FB9ED5 /* main.m */; };
 		B49F07EF1B036F7300FB9ED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */; };
 		B49F07F21B036F7300FB9ED5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07F11B036F7300FB9ED5 /* ViewController.m */; };
-		B49F07F51B036F7300FB9ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49F07F31B036F7300FB9ED5 /* Main.storyboard */; };
 		B49F07F71B036F7300FB9ED5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49F07F61B036F7300FB9ED5 /* Images.xcassets */; };
 		B49F07FA1B036F7300FB9ED5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F07F81B036F7300FB9ED5 /* LaunchScreen.xib */; };
 		B49F08061B036F7300FB9ED5 /* TCSPhonics_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F08051B036F7300FB9ED5 /* TCSPhonics_iosTests.m */; };
+		B49F08131B0370A100FB9ED5 /* TPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F08121B0370A100FB9ED5 /* TPCollectionViewCell.m */; };
+		B49F08181B0370EE00FB9ED5 /* TPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F08171B0370EE00FB9ED5 /* TPDataSource.m */; };
+		B49F081B1B03711400FB9ED5 /* TPCollectDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F081A1B03711400FB9ED5 /* TPCollectDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +36,17 @@
 		B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B49F07F01B036F7300FB9ED5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B49F07F11B036F7300FB9ED5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B49F07F41B036F7300FB9ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B49F07F61B036F7300FB9ED5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B49F07F91B036F7300FB9ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B49F07FF1B036F7300FB9ED5 /* TCSPhonics_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCSPhonics_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49F08041B036F7300FB9ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49F08051B036F7300FB9ED5 /* TCSPhonics_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCSPhonics_iosTests.m; sourceTree = "<group>"; };
+		B49F08111B0370A100FB9ED5 /* TPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCollectionViewCell.h; sourceTree = "<group>"; };
+		B49F08121B0370A100FB9ED5 /* TPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCollectionViewCell.m; sourceTree = "<group>"; };
+		B49F08161B0370EE00FB9ED5 /* TPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPDataSource.h; sourceTree = "<group>"; };
+		B49F08171B0370EE00FB9ED5 /* TPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPDataSource.m; sourceTree = "<group>"; };
+		B49F08191B03711400FB9ED5 /* TPCollectDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCollectDataSource.h; sourceTree = "<group>"; };
+		B49F081A1B03711400FB9ED5 /* TPCollectDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCollectDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +88,12 @@
 		B49F07E81B036F7300FB9ED5 /* TCSPhonics_ios */ = {
 			isa = PBXGroup;
 			children = (
+				B49F08151B0370D400FB9ED5 /* common */,
+				B49F08141B0370BD00FB9ED5 /* model */,
+				B49F08101B03707500FB9ED5 /* view */,
+				B49F080F1B03706300FB9ED5 /* controller */,
 				B49F07ED1B036F7300FB9ED5 /* AppDelegate.h */,
 				B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */,
-				B49F07F01B036F7300FB9ED5 /* ViewController.h */,
-				B49F07F11B036F7300FB9ED5 /* ViewController.m */,
-				B49F07F31B036F7300FB9ED5 /* Main.storyboard */,
 				B49F07F61B036F7300FB9ED5 /* Images.xcassets */,
 				B49F07F81B036F7300FB9ED5 /* LaunchScreen.xib */,
 				B49F07E91B036F7300FB9ED5 /* Supporting Files */,
@@ -117,6 +125,42 @@
 				B49F08041B036F7300FB9ED5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B49F080F1B03706300FB9ED5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				B49F07F01B036F7300FB9ED5 /* ViewController.h */,
+				B49F07F11B036F7300FB9ED5 /* ViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		B49F08101B03707500FB9ED5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B49F08111B0370A100FB9ED5 /* TPCollectionViewCell.h */,
+				B49F08121B0370A100FB9ED5 /* TPCollectionViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		B49F08141B0370BD00FB9ED5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B49F08191B03711400FB9ED5 /* TPCollectDataSource.h */,
+				B49F081A1B03711400FB9ED5 /* TPCollectDataSource.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		B49F08151B0370D400FB9ED5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B49F08161B0370EE00FB9ED5 /* TPDataSource.h */,
+				B49F08171B0370EE00FB9ED5 /* TPDataSource.m */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +212,7 @@
 				TargetAttributes = {
 					B49F07E51B036F7300FB9ED5 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = D53JCSVS3C;
 					};
 					B49F07FE1B036F7300FB9ED5 = {
 						CreatedOnToolsVersion = 6.3;
@@ -199,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B49F07F51B036F7300FB9ED5 /* Main.storyboard in Resources */,
 				B49F07FA1B036F7300FB9ED5 /* LaunchScreen.xib in Resources */,
 				B49F07F71B036F7300FB9ED5 /* Images.xcassets in Resources */,
 			);
@@ -219,9 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49F08131B0370A100FB9ED5 /* TPCollectionViewCell.m in Sources */,
+				B49F081B1B03711400FB9ED5 /* TPCollectDataSource.m in Sources */,
 				B49F07F21B036F7300FB9ED5 /* ViewController.m in Sources */,
 				B49F07EF1B036F7300FB9ED5 /* AppDelegate.m in Sources */,
 				B49F07EC1B036F7300FB9ED5 /* main.m in Sources */,
+				B49F08181B0370EE00FB9ED5 /* TPDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +291,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B49F07F31B036F7300FB9ED5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B49F07F41B036F7300FB9ED5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B49F07F81B036F7300FB9ED5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -349,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TCSPhonics_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TCSPhonics_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
