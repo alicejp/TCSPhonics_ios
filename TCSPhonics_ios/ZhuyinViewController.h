@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import <AVFoundation/AVFoundation.h>
-@interface ViewController : UIViewController
+@class CellSubView;
+@interface ZhuyinViewController : UIViewController
+
+- (id)initWithPhonicStyle:(PhonicButtonStyle)style;
 
 @property (nonatomic, strong)UICollectionView * collectionView;
-@property (nonatomic, strong)UIImageView * imageView;
+@property (nonatomic, strong)CellSubView * cellSubView;
 @property (nonatomic, strong)AVAudioPlayer *audioPlayer;
 @end
 

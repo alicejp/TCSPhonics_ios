@@ -30,9 +30,11 @@
 		B483ECE71C47BB440083072D /* NNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B483ECD01C47BB440083072D /* NNUtility.m */; };
 		B483ECF01C47BCD90083072D /* ScrollViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = B483ECED1C47BCD90083072D /* ScrollViewFrameAccessor.m */; };
 		B483ECF11C47BCD90083072D /* ViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = B483ECEF1C47BCD90083072D /* ViewFrameAccessor.m */; };
+		B483ECF51C47D0540083072D /* CellSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B483ECF41C47D0540083072D /* CellSubView.m */; };
+		B483ECF81C47DFFB0083072D /* WellcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B483ECF71C47DFFB0083072D /* WellcomeViewController.m */; };
 		B49F07EC1B036F7300FB9ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07EB1B036F7300FB9ED5 /* main.m */; };
 		B49F07EF1B036F7300FB9ED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */; };
-		B49F07F21B036F7300FB9ED5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07F11B036F7300FB9ED5 /* ViewController.m */; };
+		B49F07F21B036F7300FB9ED5 /* ZhuyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F07F11B036F7300FB9ED5 /* ZhuyinViewController.m */; };
 		B49F07F71B036F7300FB9ED5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49F07F61B036F7300FB9ED5 /* Images.xcassets */; };
 		B49F08061B036F7300FB9ED5 /* TCSPhonics_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F08051B036F7300FB9ED5 /* TCSPhonics_iosTests.m */; };
 		B49F08131B0370A100FB9ED5 /* TPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F08121B0370A100FB9ED5 /* TPCollectionViewCell.m */; };
@@ -137,13 +139,17 @@
 		B483ECED1C47BCD90083072D /* ScrollViewFrameAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewFrameAccessor.m; sourceTree = "<group>"; };
 		B483ECEE1C47BCD90083072D /* ViewFrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFrameAccessor.h; sourceTree = "<group>"; };
 		B483ECEF1C47BCD90083072D /* ViewFrameAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFrameAccessor.m; sourceTree = "<group>"; };
+		B483ECF31C47D0540083072D /* CellSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellSubView.h; sourceTree = "<group>"; };
+		B483ECF41C47D0540083072D /* CellSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellSubView.m; sourceTree = "<group>"; };
+		B483ECF61C47DFFB0083072D /* WellcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellcomeViewController.h; sourceTree = "<group>"; };
+		B483ECF71C47DFFB0083072D /* WellcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellcomeViewController.m; sourceTree = "<group>"; };
 		B49F07E61B036F7300FB9ED5 /* TCSPhonics_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCSPhonics_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49F07EA1B036F7300FB9ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49F07EB1B036F7300FB9ED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B49F07ED1B036F7300FB9ED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B49F07F01B036F7300FB9ED5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B49F07F11B036F7300FB9ED5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B49F07F01B036F7300FB9ED5 /* ZhuyinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuyinViewController.h; sourceTree = "<group>"; };
+		B49F07F11B036F7300FB9ED5 /* ZhuyinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuyinViewController.m; sourceTree = "<group>"; };
 		B49F07F61B036F7300FB9ED5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B49F07F91B036F7300FB9ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B49F07FF1B036F7300FB9ED5 /* TCSPhonics_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCSPhonics_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +319,9 @@
 		B49F07E81B036F7300FB9ED5 /* TCSPhonics_ios */ = {
 			isa = PBXGroup;
 			children = (
+				B49F07ED1B036F7300FB9ED5 /* AppDelegate.h */,
+				B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */,
+				B49F07F61B036F7300FB9ED5 /* Images.xcassets */,
 				B483ECF21C47BCE50083072D /* Vender */,
 				B483ECA51C47BB440083072D /* NNKit */,
 				B49F081F1B05C92400FB9ED5 /* sounds */,
@@ -320,9 +329,6 @@
 				B49F08141B0370BD00FB9ED5 /* model */,
 				B49F08101B03707500FB9ED5 /* view */,
 				B49F080F1B03706300FB9ED5 /* controller */,
-				B49F07ED1B036F7300FB9ED5 /* AppDelegate.h */,
-				B49F07EE1B036F7300FB9ED5 /* AppDelegate.m */,
-				B49F07F61B036F7300FB9ED5 /* Images.xcassets */,
 				B49F07F81B036F7300FB9ED5 /* LaunchScreen.xib */,
 				B49F07E91B036F7300FB9ED5 /* Supporting Files */,
 			);
@@ -359,8 +365,10 @@
 		B49F080F1B03706300FB9ED5 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				B49F07F01B036F7300FB9ED5 /* ViewController.h */,
-				B49F07F11B036F7300FB9ED5 /* ViewController.m */,
+				B483ECF61C47DFFB0083072D /* WellcomeViewController.h */,
+				B483ECF71C47DFFB0083072D /* WellcomeViewController.m */,
+				B49F07F01B036F7300FB9ED5 /* ZhuyinViewController.h */,
+				B49F07F11B036F7300FB9ED5 /* ZhuyinViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -370,6 +378,8 @@
 			children = (
 				B49F08111B0370A100FB9ED5 /* TPCollectionViewCell.h */,
 				B49F08121B0370A100FB9ED5 /* TPCollectionViewCell.m */,
+				B483ECF31C47D0540083072D /* CellSubView.h */,
+				B483ECF41C47D0540083072D /* CellSubView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -587,7 +597,7 @@
 				B483ECE31C47BB440083072D /* UIViewController+Addition.m in Sources */,
 				B483ECDA1C47BB440083072D /* UIAlertView+Block.m in Sources */,
 				B49F081B1B03711400FB9ED5 /* TPCollectDataSource.m in Sources */,
-				B49F07F21B036F7300FB9ED5 /* ViewController.m in Sources */,
+				B49F07F21B036F7300FB9ED5 /* ZhuyinViewController.m in Sources */,
 				B483ECE11C47BB440083072D /* UITextView+Addition.m in Sources */,
 				B49F07EF1B036F7300FB9ED5 /* AppDelegate.m in Sources */,
 				B49F07EC1B036F7300FB9ED5 /* main.m in Sources */,
@@ -595,8 +605,10 @@
 				B483ECE61C47BB440083072D /* NNPageControl.m in Sources */,
 				B483ECF01C47BCD90083072D /* ScrollViewFrameAccessor.m in Sources */,
 				B49F08181B0370EE00FB9ED5 /* TPDataSource.m in Sources */,
+				B483ECF51C47D0540083072D /* CellSubView.m in Sources */,
 				B483ECE51C47BB440083072D /* NNAdmobMediationAdsView.m in Sources */,
 				B483ECE41C47BB440083072D /* UIWindow+Addition.m in Sources */,
+				B483ECF81C47DFFB0083072D /* WellcomeViewController.m in Sources */,
 				B483ECDE1C47BB440083072D /* UIImageView+LBBlurredImage.m in Sources */,
 				B483ECDB1C47BB440083072D /* UIButton+Addition.m in Sources */,
 				B483ECDD1C47BB440083072D /* UIImage+Addition.m in Sources */,

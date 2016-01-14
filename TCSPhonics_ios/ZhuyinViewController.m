@@ -6,28 +6,30 @@
 //  Copyright (c) 2015年 alice. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ZhuyinViewController.h"
 #import "TPCollectionViewCell.h"
+#import "CellSubView.h"
 
-
-@interface ViewController ()
+@interface ZhuyinViewController ()
 <
 UICollectionViewDelegate, UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout,
+CellSubViewDelegate,
 AVAudioPlayerDelegate
 >
 {
     NSURL * soundUrl;
+    PhonicButtonStyle phonicStyle;
 }
 
 @end
 
 
-@implementation ViewController
-- (id)init {
+@implementation ZhuyinViewController
+- (id)initWithPhonicStyle:(PhonicButtonStyle)style {
     self = [super init];
     if (self) {
-
+        phonicStyle = style;
     }
     return self;
 }
@@ -40,7 +42,7 @@ AVAudioPlayerDelegate
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
-    _collectionView.backgroundColor = [UIColor clearColor];
+    _collectionView.backgroundColor = kGreenColor;
     [_collectionView registerClass:[TPCollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     [_collectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
 
@@ -57,13 +59,11 @@ AVAudioPlayerDelegate
 //    }
     
                    
-    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"b.png"]];
-    _imageView.frame = CGRectMake(50, 50, (kcommonDeviceHeight- 100)*1.34 , kcommonDeviceHeight - 100 );
-    _imageView.centerX = kcommonDeviceWidth/2;
-    _imageView.backgroundColor = [UIColor whiteColor];
-    _imageView.userInteractionEnabled = YES;
-    [self.view addSubview:_imageView];
-    _imageView.hidden = YES;
+    self.cellSubView = [[CellSubView alloc] initWithFrame:CGRectMake(0, 0, (kcommonDeviceHeight- 100)*1.34 , kcommonDeviceHeight - 100) delegate:self];
+    self.cellSubView.centerX = kcommonDeviceWidth/2;
+    self.cellSubView.centerY = kcommonDeviceHeight/2;
+    [self.view addSubview:self.cellSubView];
+    self.cellSubView.hidden = YES;
 
     
 }
@@ -83,7 +83,19 @@ AVAudioPlayerDelegate
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     TPCollectionViewCell * cell = [_collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+//    switch (phonicStyle) {
+//        case PhonicButtonStyleZhuyin:
+//            [cell setPhonicLabelWithString:C_PHONICS_ARRAY[indexPath.row]];
+//            break;
+//        case PhonicButtonStyleZhuyin2Pinyin:
+//            [cell setPhonicLabelWithString:Z2P_PHONICS_ARRAY[indexPath.row]];
+//            break;
+//        default:
+//            break;
+//    }
     [cell setPhonicLabelWithString:C_PHONICS_ARRAY[indexPath.row]];
     return cell;
 }
@@ -92,21 +104,26 @@ AVAudioPlayerDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row >= 0) {
         NNLog(@"%ld",(long)indexPath.row);
-        _imageView.image = [UIImage imageNamed:E_PHONICS_ARRAY[indexPath.row]];
+        self.cellSubView.imageView.image = [UIImage imageNamed:E_PHONICS_ARRAY[indexPath.row]];
         soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:E_PHONICS_ARRAY[indexPath.row] ofType:@"m4a"]];
     }
     
-    _imageView.hidden = NO;
+    self.cellSubView.hidden = NO;
     [self videoInit];
     [_audioPlayer play];
 }
 //
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    _imageView.hidden = YES;
+    self.cellSubView.hidden = YES;
     [_audioPlayer stop];
     
 }
 //
+
+#pragma mark
+#pragma CellVoiceDelegate
+- (void)playVoiceAgain {    [_audioPlayer play]; }
+
 - (void)videoInit{
 //    soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"b" ofType:@"m4a"]];
     NSError * error;

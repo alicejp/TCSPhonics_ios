@@ -20,7 +20,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = kBlueColor;
         _phonicLabel = [[UILabel alloc] initWithFrame:self.contentView.bounds];
         _phonicLabel.textColor = [UIColor blackColor];
         _phonicLabel.textAlignment = NSTextAlignmentCenter;
