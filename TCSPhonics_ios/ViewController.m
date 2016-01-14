@@ -62,7 +62,8 @@ AVAudioPlayerDelegate
     
                    
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"b.png"]];
-    _imageView.frame = CGRectMake(50, 50, self.view.frame.size.width - 100 , self.view.frame.size.height - 100 );
+    _imageView.frame = CGRectMake(50, 50, (self.view.frame.size.height - 100)*1.34 , self.view.frame.size.height - 100 );
+    _imageView.centerX = kcommonDeviceWidth/2;
     _imageView.backgroundColor = [UIColor whiteColor];
     _imageView.userInteractionEnabled = YES;
     [self.view addSubview:_imageView];
