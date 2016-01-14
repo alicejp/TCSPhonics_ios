@@ -50,7 +50,6 @@
     [super viewDidLoad];
     TCSPhonicButton *zhuyinButton = [[TCSPhonicButton alloc] initWithButtonStyle:PhonicButtonStyleZhuyin];
     [zhuyinButton addTarget:self action:@selector(openZhuyin:) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.view addSubview:zhuyinButton];
     
     TCSPhonicButton *zpinyinButton = [[TCSPhonicButton alloc] initWithButtonStyle:PhonicButtonStyleZhuyin2Pinyin];
