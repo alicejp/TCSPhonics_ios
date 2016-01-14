@@ -43,11 +43,7 @@ AVAudioPlayerDelegate
     _collectionView.backgroundColor = [UIColor clearColor];
     [_collectionView registerClass:[TPCollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     [_collectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
-    _array = [[NSArray alloc] init];
-    _array = @[@"ㄅ", @"ㄆ", @"ㄇ", @"ㄈ", @"", @"ㄉ", @"ㄊ", @"ㄋ", @"ㄌ", @"", @"ㄍ", @"ㄎ", @"ㄏ", @"", @"ㄐ", @"ㄑ", @"ㄒ", @"", @"ㄓ", @"ㄔ", @"ㄕ", @"ㄖ", @"", @"ㄗ", @"ㄘ", @"ㄙ", @"", @"ㄚ", @"ㄛ", @"ㄜ", @"ㄝ", @"", @"ㄞ", @"ㄟ", @"ㄠ",@"ㄡ", @"", @"ㄢ", @"ㄣ", @"ㄤ", @"ㄥ", @"", @"ㄦ", @"ㄧ", @"ㄨ", @"ㄩ"];
-    
-    _fileArray = [[NSArray alloc] init];
-    _fileArray = @[@"b", @"p", @"m", @"f",@"", @"d", @"t", @"n", @"l", @"", @"g", @"k", @"h", @"", @"ji", @"c", @"s", @"", @"jhi", @"chi", @"shi", @"ri", @"", @"zi", @"ci", @"si", @"", @"a", @"o", @"ee", @"e", @"", @"ai", @"ei", @"ao",@"ou", @"", @"an", @"en", @"ang", @"eng", @"", @"er", @"yi", @"wu", @"yu"];
+
     [self.view addSubview:_collectionView];
     
 //    soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"b" ofType:@"m4a"]];
@@ -62,7 +58,7 @@ AVAudioPlayerDelegate
     
                    
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"b.png"]];
-    _imageView.frame = CGRectMake(50, 50, (self.view.frame.size.height - 100)*1.34 , self.view.frame.size.height - 100 );
+    _imageView.frame = CGRectMake(50, 50, (kcommonDeviceHeight- 100)*1.34 , kcommonDeviceHeight - 100 );
     _imageView.centerX = kcommonDeviceWidth/2;
     _imageView.backgroundColor = [UIColor whiteColor];
     _imageView.userInteractionEnabled = YES;
@@ -79,7 +75,7 @@ AVAudioPlayerDelegate
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _array.count;
+    return E_PHONICS_ARRAY.count;
 }
 //
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -88,16 +84,16 @@ AVAudioPlayerDelegate
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TPCollectionViewCell * cell = [_collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    [cell setPhonicLabelWithString:_array[indexPath.row]];
+    [cell setPhonicLabelWithString:C_PHONICS_ARRAY[indexPath.row]];
     return cell;
 }
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row >= 0) {
-        NSLog(@"%ld",(long)indexPath.row);
-        _imageView.image = [UIImage imageNamed:_fileArray[indexPath.row]];
-        soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:_fileArray[indexPath.row] ofType:@"m4a"]];
+        NNLog(@"%ld",(long)indexPath.row);
+        _imageView.image = [UIImage imageNamed:E_PHONICS_ARRAY[indexPath.row]];
+        soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:E_PHONICS_ARRAY[indexPath.row] ofType:@"m4a"]];
     }
     
     _imageView.hidden = NO;

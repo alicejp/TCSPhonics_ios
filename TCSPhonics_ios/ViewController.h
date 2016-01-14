@@ -13,8 +13,6 @@
 
 @property (nonatomic, strong)UICollectionView * collectionView;
 @property (nonatomic, strong)UIImageView * imageView;
-@property (nonatomic, strong)NSArray * array;
-@property (nonatomic, strong)NSArray * fileArray;
 @property (nonatomic, strong)AVAudioPlayer *audioPlayer;
 @end
 
